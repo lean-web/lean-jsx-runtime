@@ -35,5 +35,5 @@
     "types": ["node", "lean-jsx-types/global"],
   },
   
-  "include": [ "src/**/*.ts"]
+  "include": [ "tsup.config.ts","src/**/*.ts"]
 }
