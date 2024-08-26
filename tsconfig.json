@@ -32,7 +32,7 @@
       "@/": ["./src/"],
       "@/*": ["./src/*"]
     },
-    "types": ["node", "jest", "express", "lean-jsx-types/global"],
+    "types": ["node", "lean-jsx-types/global"],
   },
   
   "include": [ "src/**/*.ts"]
