@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "index.js",
+  "files": ["lib"],
   "scripts": {
     "build": "tsc",
     "semver-check": "npx node-env-run --exec \"semantic-release --dry-run --ci false\""
@@ -23,7 +24,8 @@
   },
   "devDependencies": {
     "typescript": "^5.2.2",
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.9.0",
+    "tsup": "^7.2.0"
   },
   "release": {
     "branches": ["main"],
