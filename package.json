@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "semver-check": "npx node-env-run --exec \"semantic-release --dry-run --ci false\""
   },
   "exports": {
     "./*": {
@@ -23,5 +24,23 @@
   "devDependencies": {
     "typescript": "^5.2.2",
     "@types/node": "^20.9.0"
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            { "type": "build", "release": "patch" },
+            { "type": "docs", "scope": "README", "release": "patch" },
+            { "type": "refactor", "release": "patch" },
+            { "scope": "no-release", "release": false }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator"
+    ]
   }
 }
