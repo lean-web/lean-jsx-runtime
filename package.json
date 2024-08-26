@@ -1,0 +1,21 @@
+{
+  "name": "lean-jsx-runtime",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "exports": {
+    "./*": "./lib/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lean-jsx-types": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

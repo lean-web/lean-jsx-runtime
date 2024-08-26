@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["esnext", "dom", "DOM.Iterable"],
+    "skipLibCheck": false,
+    "outDir": "./lib",
+    "rootDir": "src",
+    /* Bundler mode */
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    // "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+
+    "jsx": "react-jsx", // support JSX
+    "jsxImportSource": "@/",
+    "paths": {
+      "@tests/": ["./tests/"],
+      "@tests/*": ["./tests/*"],
+      "@/": ["./src/"],
+      "@/*": ["./src/*"]
+    },
+    "types": ["node", "jest", "express", "lean-jsx-types/global"],
+  },
+  
+  "include": [ "src/**/*.ts"]
+}
